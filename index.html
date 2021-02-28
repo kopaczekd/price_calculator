@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <title>Kalkulator cen</title>
+</head>
+<body>
+
+<h1 align="center">Kalkulator cen</h1>
+
+<center>
+<select name="treatments" id="treatments" style="text-align: center; text-align-last: center;" class="price_calculator_select">
+	<option disabled selected value> Wybierz zabieg </option>
+	<option value="laserowy_lifting" data-body-part-number="1">LASEROWY LIFTING TWARZY</option>
+	<option value="pikosekundowe_zamykanie" data-body-part-number="2">PIKOSEKUNDOWE ZAMYKANIE RUMIENIA</option>
+	<option value="przebarwienia" data-body-part-number="3">LIKWIDACJA PRZEBARWIEŃ</option>
+	<option value="laserowy_peeling" data-body-part-number="4">LASEROWY PEELING WĘGLOWY</option>
+	<option value="laserowe_usuwanie" data-body-part-number="5">USUWANIE MAKIJAŻU PERMANETNEGO BRWI</option>
+	<option value="hifu" data-body-part-number="6">HIFU</option>
+	<option value="kriolipoliza" data-body-part-number="7">KRIOLIPOLIZA COOLTECH CRYSTILE</option>
+	<option value="cellulogia" data-body-part-number="8">CELLULOGIA DRENAŻ PRÓŻNIOWY</option>
+	<option value="mezoterapia" data-body-part-number="9">MEZOTERAPIA IGŁOWA TWARZ, SZYJA, DEKOLT</option>
+	<option value="medyczny_peeling" data-body-part-number="10">PEELINGI MEDYCZNE MESOESTETIC</option>
+</select>
+
+
+<div id="all_body_parts_sets">
+
+    <!-- LASEROWY LIFTING TWARZY -->
+    <div id="laserowy_lifting">
+        <select name="body_parts" id="body_parts_1" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="700" data-price-choices="choices: 3+1,promo_code">Twarz</option>
+            <option value="1000" data-price-choices="choices: 3+1, promo_code">Twarz szyja dekolt</option>
+            <option value="500" data-price-choices="choices: 3+1, promo_code">Szyja dekolt</option>
+            <option value="300" data-price-choices="choices: 3+1, promo_code">Szyja</option>
+            <option value="400" data-price-choices="choices: 3+1, promo_code">Dekolt</option>
+        </select>
+    </div>
+
+    <!-- PIKOSEKUNDOWE ZAMYKANIE RUMIENIA -->
+    <div id="pikosekundowe_zamykanie">
+        <select name="body_parts" id="body_parts_2" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="200" data-price-choices="choices: 3+1, promo_code">Nos lub broda</option>
+            <option value="300" data-price-choices="choices: 3+1, promo_code">Policzki</option>
+            <option value="400" data-price-choices="choices: 3+1, promo_code">Szyja dekolt</option>
+            <option value="400" data-price-choices="choices: 3+1, promo_code">Cała twarz</option>
+        </select>
+    </div>
+
+    <!-- LIKWIDACJA PRZEBARWIEŃ -->
+    <div id="przebarwienia">
+        <select name="body_parts" id="body_parts_3" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="400" data-price-choices="choices: 3+1, promo_code">Cała twarz</option>
+            <option value="200" data-price-choices="choices: 3+1, promo_code">Miejscowe</option>
+        </select>
+    </div>
+
+    <!-- LASEROWY PEELING WĘGLOWY -->
+    <div id="laserowy_peeling">
+        <select name="body_parts" id="body_parts_4" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="300" data-price-choices="choices: 3+1, promo_code">Twarz lub dekolt</option>
+            <option value="500" data-price-choices="choices: 3+1, promo_code">Twarz + dekolt + maska szyja gratis</option>
+            <option value="300" data-price-choices="choices: 3+1, promo_code">Laserowe leczenie trądziku i łojotoku twarzy</option>
+        </select>
+    </div>
+
+<!-- USUWANIE MAKIJAŻU PERMANETNEGO BRWI -->
+    <div id="laserowe_usuwanie">
+        <select name="body_parts" id="body_parts_5" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="300" data-price-choices="choices: promo_code">Twarz</option>
+        </select>
+	</div>
+
+    <!-- HIFU -->
+    <div id="hifu">
+        <select name="body_parts" id="body_parts_6" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="1200" data-price-choices="choices: promo_code">Policzki + linia żuchwy</option>
+            <option value="400" data-price-choices="choices: promo_code">Podbródek</option>
+            <option value="1800" data-price-choices="choices: promo_code">Brzuch</option>
+           <option value="1800" data-price-choices="choices: promo_code">Ramiona tzw. Pelikanki</option>
+        </select>
+	</div>
+
+    <!-- KRIOLIPOLIZA COOLTECH CRYSTILE -->
+    <div id="kriolipoliza">
+        <select name="body_parts" id="body_parts_7" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz</option>
+            <option value="300" data-price-choices="choices: promo_code">1 przyłożenie 1 głowica</option>
+            <option value="500" data-price-choices="choices: promo_code">1 przyłożenie 2 głowice</option>
+            <option value="800" data-price-choices="choices: promo_code">2 zabiegi 2 głowice</option>
+            <option value="1000" data-price-choices="choices: promo_code">3 zabiegi 2 głowice</option>
+            <option value="1200" data-price-choices="choices: promo_code">4 zabiegi 2 głowice</option>
+        </select>
+	</div>
+
+    <!-- CELLULOGIA DRENAŻ PRÓŻNIOWY -->
+    <div id="cellulogia">
+        <select name="body_parts" id="body_parts_8" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz część ciała</option>
+            <option value="100" data-price-choices="choices:10-30%, promo_code">Uda</option>
+            <option value="130" data-price-choices="choices: 10-30%, promo_code">Uda + Pośladki</option>
+            <option value="150" data-price-choices="choices: 10-30%,  promo_code">Plecy 30 min.</option>
+           <option value="100" data-price-choices="choices: 10-30%,  promo_code">Ramiona 45 min.</option>
+           <option value="120" data-price-choices="choices: 10-30%,  promo_code">Brzuch + talia 45 min.</option>
+           <option value="75" data-price-choices="choices: 10-30%,  promo_code">Pośladki 30 min.</option>
+        </select>
+	</div>
+
+    <!-- MEZOTERAPIA IGŁOWA TWARZ, SZYJA, DEKOLT -->
+    <div id="mezoterapia">
+        <select name="body_parts" id="body_parts_9" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz</option>
+            <option value="400" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">HYDRA BOOSTER FILORGA</option>
+            <option value="400" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Saypha Rich</option>
+            <option value="600" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Power mezo CROMA</option>
+           <option value="500" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Neauvia HYDRO DELUX 2,5ML</option>
+           <option value="250" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Light eyes ultra NANOSOFT</option>
+           <option value="300" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">NANOSOFT LIPS BOOSTERS</option>
+           <option value="400" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">NANOSOFT EYE BOOSTERS</option>
+           <option value="200" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Fillorga NCTF</option>
+           <option value="200" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Fillorga MHA 10</option>
+           <option value="200" data-price-choices="choices: x2 -10%, x3 -20%, x4 -30%, promo_code">Mezoterapia skóry głowy</option>
+        </select>
+	</div>
+
+    <!-- PEELINGI MEDYCZNE MESOESTETIC -->
+    <div id="medyczny_peeling">
+        <select name="body_parts" id="body_parts_10" style="text-align: center; text-align-last: center;">
+            <option disabled selected value>Wybierz</option>
+            <option value="200" data-price-choices="choices: promo_code">Mesoestetic mesopeel® melanostop tran3x</option>
+            <option value="150" data-price-choices="choices: promo_code">Mesoestetic mesopeel®lactic</option>
+            <option value="150" data-price-choices="choices: promo_code">Mesoestetic mesopeel®mandelic</option>
+        </select>
+	</div>
+</div>
+
+<!-- price_promo -->
+
+<div id="price_promo_option" style="margin-top: 15px;">
+
+    <div id="div_regular_price">
+        <input type="radio" id="regular_price" name="price_promo_option" value="regular_price" checked>
+        <label for="regular_price">Cena regularna</label>
+        <br>
+    </div>
+    <div id="div_3_1">
+        <input type="radio" id="3+1" name="price_promo_option" value="3+1">
+        <label for="3+1">Oferta pakietowa 3 + 1 gratis</label>
+        <br>
+    </div>
+    <div id="div_10_30_1">
+        <input type="radio" id="10-30%" name="price_promo_option" value="10-30%">
+        <label for="10-30%">Oferta pakietowa 10 -30% rabatu</label>
+        <br>
+    </div>
+    <div id="div_x2_10">
+        <input type="radio" id="x2 -10%" name="price_promo_option" value="x2 -10%">
+        <label for="x2 -10%">Oferta pakietowa 2 zabiegi -10%</label>
+        <br>
+    </div>
+    <div id="div_x3_20">
+        <input type="radio" id="x3 -20%" name="price_promo_option" value="x3 -20%">
+        <label for="x3 -20%">Oferta pakietowa 3 zabiegi -20%</label>
+        <br>
+    </div>
+    <div id="div_x4_30">
+        <input type="radio" id="x4 -30%" name="price_promo_option" value="x4 -30%">
+        <label for="x4 -30%">Oferta pakietowa 4 zabiegi -30%</label>
+        <br>
+    </div>
+<!--    <div id="div_promo_code">-->
+<!--        <input type="radio" id="promo_code" name="price_promo_option" value="promo_code">-->
+<!--        <label for="promo_code">Posiadam kod rabatowy</label>-->
+<!--    </div>-->
+
+</div>
+
+<div id="promo_code_div">
+    <input type="text" id="given_promo_code">
+</div>
+
+<div id="div_first_visit">
+    <input type="checkbox" id="first_visit" value="first_20" style="margin-top: 15px;">
+    <Label for="first_visit">Jestem u Was pierwszy raz!</Label>
+</div>
+
+<!-- Print final price -->
+<h1 id="price" data-value="">0 PLN</h1>
+</center>
+
+</body>
+</html>
